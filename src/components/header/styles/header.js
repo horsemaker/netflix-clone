@@ -24,6 +24,14 @@ export const Container = styled.div`
     margin: 0 30px;
   }
 `;
+export const Picture = styled.button`
+  background: url(${({ src }) => src});
+  background-size: contain;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`;
 
 export const Link = styled.p`
   color: #fff;
@@ -107,21 +115,12 @@ export const ButtonLink = styled(ReactRouterLink)`
   }
 `;
 
-export const Picture = styled.button`
-  background: url(${({ src }) => src});
-  background-size: contain;
-  border: 0;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-`;
-
 export const Dropdown = styled.div`
   display: none;
   position: absolute;
   background-color: black;
   padding: 10px;
-  width: 100px;
+  width: 120px;
   top: 32px;
   right: 10px;
   ${Group}:last-of-type ${Link} {
